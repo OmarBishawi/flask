@@ -1,0 +1,22 @@
+.checkerboard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+}
+
+.row {
+    display: flex;
+}
+
+.black {
+    width: 50px; /* Adjust size of each square */
+    height: 50px; /* Adjust size of each square */
+    background-color: black;
+}
+
+.white {
+    width: 50px; /* Adjust size of each square */
+    height: 50px; /* Adjust size of each square */
+    background-color: white;
+}
