@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Information</title>
+</head>
+<body>
+    <h1>Submitted Information</h1>
+    <p><strong>Your Name:</strong> {{ name }}</p>
+    <p><strong>Dojo Location:</strong> {{ dojo_location }}</p>
+    <p><strong>Favourite Language:</strong> {{ fav_language }}</p>
+    {% if comment %}
+    <p><strong>Comment:</strong> {{ comment }}</p>
+    {% endif %}
+    
+    <form action="/">
+        <input type="submit" value="Go Back">
+    </form>
+</body>
+</html>
