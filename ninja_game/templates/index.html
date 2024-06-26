@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold Game</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Ninja Gold Game</h2>
+    <div class="gold">Your Gold: {{ ninja_gold }}</div>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="farm">
+        <input type="submit" value="Farm (earns 10-20 gold)">
+    </form>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="cave">
+        <input type="submit" value="Cave (earns 5-10 gold)">
+    </form>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="house">
+        <input type="submit" value="House (earns 2-5 gold)">
+    </form>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="casino">
+        <input type="submit" value="Casino (earns/takes 0-50 gold)">
+    </form>
+    <h3>Activities:</h3>
+    <ul class="activities">
+        {% for activity in activities %}
+            <li>{{ activity }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
